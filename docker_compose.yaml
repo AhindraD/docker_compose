@@ -8,6 +8,8 @@ services:
       - MONGO_INITDB_ROOT_USERNAME=admin
       - MONGO_INITDB_ROOT_PASSWORD=password
     container_name: mongodb-one
+    volumes:
+      - mongo-data-one: /data/db
   mongo-express:
     image: mongo-express
     restart: always
@@ -18,3 +20,6 @@ services:
       - ME_CONFIG_MONGODB_ADMINPASSWORD=password
       - ME_CONFIG_MONGODB_SERVER=mongodb-one
     container_name: mongo-express-one
+volumes:
+  mongo-data-one:
+    driver: local
