@@ -1,4 +1,4 @@
-version: '3'
+version: '3.9'
 services:
   mongodb:
     image: mongo
@@ -7,6 +7,7 @@ services:
     environment:
       - MONGO_INITDB_ROOT_USERNAME=admin
       - MONGO_INITDB_ROOT_PASSWORD=password
+    container_name: mongodb-one
   mongo-express:
     image: mongo-express
     restart: always
@@ -15,4 +16,5 @@ services:
     environment:
       - ME_CONFIG_MONGODB_ADMINUSERNAME=admin
       - ME_CONFIG_MONGODB_ADMINPASSWORD=password
-      - ME_CONFIG_MONGODB_SERVER=mongo_one
+      - ME_CONFIG_MONGODB_SERVER=mongodb-one
+    container_name: mongo-express-one
