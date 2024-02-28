@@ -1,0 +1,18 @@
+{
+  "name": "docker_compose",
+  "version": "1.0.0",
+  "description": "Welcome to our Docker Compose Repository! This repository is a collection of Docker Compose files designed to simplify the deployment of various applications and services. Whether you're looking to set up a database, a web server, or a complete monitoring stack, you'll find ready-to-use configurations here.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
